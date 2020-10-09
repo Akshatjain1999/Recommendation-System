@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+<link rel="stylesheet" type="text/css" href="static/css/signup.css">
+<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+</head>
+<body>
+  <div class="box">
+<h2>Log in</h2>
+<form method="POST" >
+  <input type="text" placeholder="Username" required id="user" name="username"><br>
+  <input type="password" placeholder="password" required name="password"><br>
+  <input type="submit" value="Log in"><br>
+
+</form>
+  {% for mesg in get_flashed_messages() %}
+  <p>{{ mesg }}</p>
+  {% endfor %}
+</div>
+</body>
+<script type="text/javascript">
+  function fun()
+  {
+    var c=document.getElementById('user').value;
+    alert("Welcome Back ,"+c);
+     
+  }
+</script>
+</html>

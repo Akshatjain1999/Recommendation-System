@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <link href="static/main.css" rel="stylesheet" type="text/css" media="all">
+    <style>
+      .showdetails {
+
+        background-color: blue;
+        font-size: 18;
+        display: block;
+        margin: 12px;
+      }
+
+    </style>
+</head>
+    <body>
+    	
+        
+    
+    {%if movies%}
+    <div class="movies" style="margin-left:20%">
+      <h2>Recommended Movies for user</h2>
+      <table style="width:100%;">
+        {%for movie in movies%}
+         <div class="showdetails">{{movie['title']}}</div>
+        {%endfor%}
+      </table>
+    </div>
+    {%endif%}
+</body>
+</html>

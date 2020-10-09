@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="/static/css/signup.css">
+	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+</head>
+<body>
+	<div class="box">
+		<h2>Sign Up Here</h2>
+		<form onsubmit="fun()" method="POST">
+			<input type="text" placeholder="First Name" required name="firstname"><br>
+			<input type="text" placeholder="Last Name" required name="lastname"><br>
+			<input type="email" placeholder="Email" required name="email"><br>
+			<input type="text" placeholder="Username" required name="username"><br>
+			<input type="password" placeholder="Password" id="password" name="password"><br>
+			<input type="password" placeholder="Confirm password" oninput="check(this)">
+			<input type="Submit" name="Sign UP"
+			>
+		</form>
+      {% for mesg in get_flashed_messages() %}
+       <h1>{{ mesg }}</h1>
+    {% endfor %}
+	</div>
+<script language='javascript' type='text/javascript'>
+    function check(input) {
+        if (input.value != document.getElementById('password').value) {
+            input.setCustomValidity('Password Must be Matching.');
+        } else {
+            // input is valid -- reset the error message
+            input.setCustomValidity('');
+        }
+    }
+    function fun(){ 
+ 
+   alert("You have sucessfully signup,Please Log in ");
+   
+    }
+</script>
+</body>
+</html>

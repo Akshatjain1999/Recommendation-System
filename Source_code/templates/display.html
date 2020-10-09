@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+  <link href="/static/css/style.css" rel="stylesheet">
+  
+</head>
+<body id="body"  style = "text-align:center;">
+
+
+ <!--[if lt IE 7]>
+<p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser
+  today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better
+  experience this site.</p>
+<![endif]-->
+
+<!--[if lt IE 9]>
+<script src="/components/es5-shim/es5-shim.min.js"></script>
+<script src="/components/json3/lib/json3.min.js"></script>
+<![endif]-->
+<div class="ml4-pages root-page">
+
+  <div class="big-header">
+
+    <div class="base-container big-header-content">
+      <img src="/images/MovieRecommendator-logo-white.svg" width="330" height="64" alt="MovieRecommendator">
+
+      <h1 class="root-tagline">Non-commercial, personalized movie recommendations.</h1>
+      <p>
+      	To check the recomended movies:
+      
+      <label>
+      		<button onclick = "resultDisplay()" class="btnclickhere">click here</button>  
+	  </label>
+      </p>
+    </div>
+  </div>
+
+      
+    
+      
+    <p id = "downImg" style = "color:green; font-size: 20px; font-weight: bold;">  
+    </p>
+</div>
+
+<script type="text/javascript">
+  	 
+    var down = document.getElementById('downImg');
+  	
+  	function resultDisplay()
+  	{
+  		
+        	var img = new Image(); 
+        	img.src =  "images/site/main-screen.png"; 
+        	img.height = "250";
+			img.width = "250";  
+        	document.getElementById('body').appendChild(img);    	
+  	}
+  </script> 
+
+</body>
+</html>
+
+<!--
+	<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+  <link href="css/style.css" rel="stylesheet">
+  
+</head>
+<body id="body"  style = "text-align:center;">
+
+
+ 
+      
+    <button onclick = "displayResults()">  
+        click here  
+    </button>  
+      
+    <p id = "GFG_DOWN" style =  
+            "color:green; font-size: 20px; font-weight: bold;">  
+    </p>
+     <script>  
+        var up = document.getElementById('GFG_UP');  
+        up.innerHTML = "Click on the button to add image element";  
+        var down = document.getElementById('GFG_DOWN');  
+          
+        function displayResults() { 
+            var img = document.createElement('img'); 
+            img.src =  "images/site/main-screen.png"; 
+            document.getElementById('body').appendChild(img); 
+ 
+        }  
+     
+  	/*function resultDisplay()
+  	{
+  		
+        	    var img = document.createElement("img"); 
+			    img.src = "/images/site/main-screen.png"; 
+    			var src = document.getElementById("x"); 
+    			src.appendChild(img); 
+    	
+  	}
+  	*/
+  </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html >
+<html >
+<head>
+<title>Search result for your movie</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="../static/css/show.css" type="text/css" media="all" />
+<script type="text/javascript" src="../static/js/jquery-1.4.2.min.js"></script>
+
+<!--[if IE 6]><link rel="stylesheet" href="css/ie6.css" type="text/css" media="all" /><![endif]-->
+</head>
+<body>
+<!-- START PAGE SOURCE -->
+<div id="shell">
+  <div id="header">
+    <h3 >Movie Recommendation System</h3>
+    <div class="social"> <span>FOLLOW US ON:</span>
+      <ul>
+        <li><a class="twitter" href="#">twitter</a></li>
+        <li><a class="facebook" href="#">facebook</a></li>
+        <li><a class="vimeo" href="#">vimeo</a></li>
+        <li><a class="rss" href="#">rss</a></li>
+      </ul>
+    </div>
+    <div id="navigation">
+     
+    </div>
+    <div id="sub-navigation">
+     
+      
+      <form action="/search" method="POST" accept-charset="utf-8">
+        <label for="search-field">SEARCH</label>
+        <input type="text" name="search_movie" value="" id="search-field" class="blink search-field"  />
+        <input type="submit" value="GO!" class="search-button" />
+      </form>
+      
+    </div>
+  </div>
+  <div id="main">
+    <div id="content">
+      <div class="box">
+        <div class="head">
+          <h2>Your Search result for {{movie}} </h2>
+          <p class="text-right"><a href="/">log out</a></p>
+        </div>
+       
+      {%for movie in movies %}
+        
+      <div class="movie">
+          <div class="movie-image"> <span class="play"><span class="name"></span></span> <a href="#"><img src="http://image.tmdb.org/t/p/w185/{{movie['poster']}}" alt="{{movie['title']}}" /></a> </div>
+          <div class="rating">
+            <p>{{movie['title']}}</p>
+            
+          </div>
+      </div>
+      
+     {%endfor%}
+     
+       
+        <div class="cl">&nbsp;</div>
+      </div>
+     
+    </div>
+    </div>
+    
+   
+  </div>
+  <div id="footer">
+    <p class="lf">Copyright &copy; 2020 <a href="#">Verto Research</a> - All Rights Reserved</p>
+    <p class="rf">Design by <a href="#">Akshat Jain</a></p>
+    <div style="clear:both;"></div>
+  </div>
+</div>
+<!-- END PAGE SOURCE -->
+</body>
+</html>
